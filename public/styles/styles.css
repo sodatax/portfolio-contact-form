@@ -35,10 +35,22 @@ div{
     flex-direction: column;
 }
 
-.row{
+.row, .row2{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.row{
+    gap: 2rem;
+}
+
+.row2{
+    gap: 1rem;
+}
+
+.row label, .row2 label{
+    flex: 1;
 }
 
 input[type="text"], textarea, select{

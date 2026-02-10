@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- Scripts -->
-    <script rel="scripts" src="js/" defer></script>
+    <script rel="scripts" src="js/contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,10 +23,12 @@
             <!-- Row 1 -->
             <div class="row">
                 <label for="fname">First Name
+                    <span class="err" id="err-fname">*First name is required*</span>
                     <input type="text" id="fname" name="fname">
                 </label>
 
                 <label for="lname">Last Name
+                    <span class="err" id="err-lname">*Last name is required*</span>
                     <input type="text" id="lname" name="lname">
                 </label>
 
@@ -55,7 +57,8 @@
         <section class="info-container">
             <div class="row2">
                 <label>How did we meet?
-                    <select>
+                    <span class="err" id="err-meet">*How we met is required*</span>
+                    <select id="meet">
                         <option value="none">Please Select</option>
                         <option value="online">Online</option>
                         <option value="linkedin">LinkedIn</option>

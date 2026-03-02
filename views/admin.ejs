@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/general.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Resume</a>
+        <a href="/contact">Contact</a>
+        <a href="/admin">Admin</a>
+        <a href="https://github.com/sodatax/portfolio-contact-form">GitHub Repo</a>
+        <a href="https://www.linkedin.com/in/hosea-nacanaynay">LinkedIn</a>
+    </nav>
+
+    <div class="general-container">
+        <h2><%= message %></h2>
+        <% info.forEach(u_info => { %>
+            <div class="user-row">
+                <% Object.values(u_info).forEach(value => { %>
+                    <span><%= value %> -></span>
+                <% }) %>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

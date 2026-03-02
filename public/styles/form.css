@@ -1,9 +1,13 @@
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+    padding:0;
+
+}
+
+.contact-container{
     max-width: 60%;
     margin:0 auto;
     padding: 2rem;
-    background-color: lightgrey;
 }
 
 header{
@@ -58,21 +62,4 @@ input[type="text"], textarea, select{
     padding: .5rem;
     display: flex;
     justify-content: space-between;
-}
-
-#submit-button{
-    border:none;
-    background-color: darkgreen;
-    border-color: darkgreen;
-    padding: 0.5rem 0.75rem;
-    border-radius: .25rem;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-
-.err{
-    color: darkred;
-    display: none;
-    font-style: italic;
 }

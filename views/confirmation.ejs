@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/general.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Resume</a>
+        <a href="/contact">Contact</a>
+        <a href="/admin">Admin</a>
+        <a href="https://github.com/sodatax/portfolio-contact-form">GitHub Repo</a>
+        <a href="https://www.linkedin.com/in/hosea-nacanaynay">LinkedIn</a>
+    </nav>
+
+    <div class="general-container">
+        <h1>Thanks <%= u_info.fname %>, your form has been submitted.</h1>
+        <br>
+        <h2>Submission Info:</h2>
+        <h3>First Name: <%=u_info.fname%> </h3>
+        <h3>Last Name: <%=u_info.lname%></h3>
+        <h3>Job: <%=u_info.job%></h3>
+        <h3>Company: <%=u_info.company%></h3>
+        <h3>LinkedIn: <%=u_info.linkedin%></h3>
+        <h3>Email: <%=u_info.email%></h3>
+        <h3>Other: <%=u_info.other%></h3>
+        <h3>Message: <%=u_info.message%></h3>
+
+        <br>
+        <a id="home-button" href="/" role="button">
+            <button>Home</button>
+        </a>
+    </div>
+</body>
+</html>

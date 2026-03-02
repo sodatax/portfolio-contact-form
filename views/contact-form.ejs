@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/form-img.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <!-- Scripts -->
+    <script rel="scripts" src="js/contact.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Resume</a>
+        <a href="/contact">Contact</a>
+        <a href="/admin">Admin</a>
+        <a href="https://github.com/sodatax/portfolio-contact-form">GitHub Repo</a>
+        <a href="https://www.linkedin.com/in/hosea-nacanaynay">LinkedIn</a>
+    </nav>
+    <div class="contact-container">
+        <header>
+            <h1>Contact Form</h1>
+        </header>
+        <form id="contact-form" action="/submit-form" method="post">
+            <section class="info-container">
+                <!-- Row 1 -->
+                <div class="row">
+                    <label for="fname">First Name
+                        <span class="err" id="err-fname">*First name is required*</span>
+                        <input type="text" id="fname" name="fname">
+                    </label>
+
+                    <label for="lname">Last Name
+                        <span class="err" id="err-lname">*Last name is required*</span>
+                        <input type="text" id="lname" name="lname">
+                    </label>
+
+                    <label for="job">Job Title
+                        <input type="text" id="job" name="job">
+                    </label>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row">
+                    <label for="company">Company
+                        <input type="text" id="company" name="company">
+                    </label>
+
+                    <label for="linkedin">LinkedIn URL
+                        <input type="text" id="linkedin" name="linkedin">
+                    </label>
+
+                    <label for="email">Email Address
+                        <input type="text" id="email" name="email">
+                    </label>
+                </div>
+            </section>
+
+            <!-- Row 3 -->
+            <section class="info-container">
+                <div class="row2">
+                    <label>How did we meet?
+                        <span class="err" id="err-meet">*How we met is required*</span>
+                        <select id="meet">
+                            <option value="none">Please Select</option>
+                            <option value="online">Online</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="in-person">In Person</option>
+                            <option value="na">Have Not Met</option>
+                        </select>
+                    </label>
+
+                    <label for="other">Other (Please Specify)
+                        <input type="text" id="other" name="other">
+                    </label>
+                </div>
+            </section>
+
+            <!-- Message -->
+            <div>
+                <label for="message">Message
+                    <textarea rows="5" id="message" name="message"></textarea>
+                </label>
+            </div>
+
+            <!-- Mailing List -->
+            <div>
+                <input type="checkbox" id="mailing-list" name="mailing-list">
+                <label>Please add me to your mailing list</label>
+            </div>
+
+            <!-- Email Format -->
+            <div>
+                <label for="email-format">Choose an email format:</label>
+                <label for="html-email">
+                    <input type="radio" id="html-email" value="html-email" name="email-format">HTML
+                </label>
+                <label for="text-email">
+                    <input type="radio" id="text-email" value="text-email" name="email-format">Text
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" id="submit-button">Submit</button>
+            </div>
+        </form>
+        <!-- <footer>
+            <a href="https://github.com/sodatax/portfolio-contact-form">https://github.com/sodatax/portfolio-contact-form</a>
+        </footer> -->
+    </div>
+</body>
+</html>

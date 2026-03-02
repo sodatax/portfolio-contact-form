@@ -4,6 +4,8 @@ import express from 'express';
 // Create an instance of an Express application
 const app = express();
 
+app.set('view engine', 'ejs');
+
 // Define the port number where our server will listen
 const PORT = 3003;
 
@@ -13,11 +15,15 @@ app.use(express.urlencoded({extended: true}));
 
 const info = [];
 
+app.get('/', (req,res) => {
+    res.render('resume');
+});
+
 // Define a default "route" ('/')
 // req: contains information about the incoming request
 // res: allows us to send back a response to the client
-app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`)
+app.get('/contact', (req, res) => {
+    res.render('contact-form');
 });
 
 ///fname=Hosea&lname=Nacanaynay&job=&company=&linkedin=&email=&other=&message=
@@ -35,11 +41,18 @@ app.post('/submit-form', (req,res) => {
 
     info.push(u_info);
 
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+    res.render('confirmation', {u_info});
 });
 
 app.get('/admin', (req, res) => {
-    res.send(info);
+    let message;
+
+    if(info.length==0){
+        message = "There are no submissions.";
+    }else{
+        message = "Submissions:"
+    }
+    res.render('admin', {info, message});
 });
 
 // Start the server and listen on the specified port

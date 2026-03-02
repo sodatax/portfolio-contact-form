@@ -1,0 +1,72 @@
+/* ------ Colors ------ */
+:root{
+    --background-color: #EDEDCE;
+    --background-color-2: #296374;
+}
+
+.resume-container{
+    width: 55%;
+    /* display: flex;
+    flex-direction: column; */
+    margin:0 auto;
+}
+
+body{
+    background-color: var(--background-color);
+    margin: 0 auto 2rem auto;
+}
+
+/* ------ General Styling ------ */
+.title-date{
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+
+main{
+    padding:0 1rem;
+}
+
+.title-date h3{
+    margin:0;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+img{
+    max-width: 15%;
+    min-width: 130px;
+    margin-bottom: 0;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+ul{
+    margin-top: 0;
+}
+
+/* ------ Section Styling ------ */
+.my-info{
+    width:100%;
+    padding:0 1rem 1rem 1rem;
+    color: white;
+    background-color: var(--background-color-2);
+    border-radius: 0 0 .75rem .75rem;
+}
+
+.technical-skills{
+    list-style-type: "// ";
+}
+
+
+/* ------ Responsive Windows ------ */
+@media (max-width:750px){
+    .resume-container{
+        width: 85%;
+        font-size: 75%;
+    }
+}
